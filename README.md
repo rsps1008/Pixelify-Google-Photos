@@ -1,4 +1,7 @@
 # Pixelify-Google-Photos
+
+⚠️⚠️ This project is EOL. I have entirely stopped using Google Photos. Sorry for the inconvenience. ⚠️⚠️
+
 LSPosed / EdXposed module to add Google Pixel features on Google Photos for any device.  
 Tested on EdXposed by [Jim Wu](https://github.com/MlgmXyysd)  
 
