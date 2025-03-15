@@ -1,5 +1,9 @@
 package balti.xposed.pixelifygooglephotos
 
+import android.os.Build
+
+
+
 /**
  * Build values taken from:
  * Pixel 6:
@@ -49,7 +53,12 @@ object DeviceProps {
      */
     val allFeatures = listOf(
 
-        Features("Pixel 2016", // Pixel XL
+        Features(
+            "Pixel 2025", // Pixel 6 Pro
+
+        ),
+        Features(
+            "Pixel 2016", // Pixel XL
             "com.google.android.apps.photos.NEXUS_PRELOAD",
             "com.google.android.apps.photos.nexus_preload",
             "com.google.android.feature.PIXEL_EXPERIENCE",
@@ -67,35 +76,42 @@ object DeviceProps {
             "com.google.android.apps.photos.PIXEL_2018_PRELOAD"
         ),
 
-        Features("Pixel 2019 mid-year", // Pixel 3a XL
+        Features(
+            "Pixel 2019 mid-year", // Pixel 3a XL
             "com.google.android.feature.PIXEL_2019_MIDYEAR_EXPERIENCE",
             "com.google.android.apps.photos.PIXEL_2019_MIDYEAR_PRELOAD",
         ),
 
-        Features("Pixel 2019", // Pixel 4 XL
+        Features(
+            "Pixel 2019", // Pixel 4 XL
             "com.google.android.feature.PIXEL_2019_EXPERIENCE",
             "com.google.android.apps.photos.PIXEL_2019_PRELOAD",
         ),
 
-        Features("Pixel 2020 mid-year", // Pixel 4a
+        Features(
+            "Pixel 2020 mid-year", // Pixel 4a
             "com.google.android.feature.PIXEL_2020_MIDYEAR_EXPERIENCE",
             "com.google.android.apps.photos.PIXEL_2020_MIDYEAR_PRELOAD",
         ),
 
-        Features("Pixel 2020", // Pixel 5
+        Features(
+            "Pixel 2020", // Pixel 5
             "com.google.android.feature.PIXEL_2020_EXPERIENCE",
             "com.google.android.apps.photos.PIXEL_2020_PRELOAD",
         ),
 
-        Features("Pixel 2021 mid-year", // Pixel 5a
+        Features(
+            "Pixel 2021 mid-year", // Pixel 5a
             "com.google.android.feature.PIXEL_2021_MIDYEAR_EXPERIENCE",
             "com.google.android.apps.photos.PIXEL_2021_MIDYEAR_PRELOAD",
         ),
 
-        Features("Pixel 2021", // Pixel 6 Pro
+        Features(
+            "Pixel 2021", // Pixel 6 Pro
             "com.google.android.feature.PIXEL_2021_EXPERIENCE",
             "com.google.android.apps.photos.PIXEL_2021_PRELOAD",
         ),
+
     )
 
     /**
@@ -142,6 +158,7 @@ object DeviceProps {
         AndroidVersion("Q 10.0", "10", 29),
         AndroidVersion("R 11.0", "11", 30),
         AndroidVersion("S 12.0", "12", 31),
+        AndroidVersion("U 14.0", "14", 34),
     )
 
     /**
@@ -286,6 +303,73 @@ object DeviceProps {
             ),
             "Pixel 2021",
             getAndroidVersionFromLabel("S 12.0"),
+        ),
+
+        // 少最大字
+        DeviceEntries(
+            "Xiaomi 14T", hashMapOf(
+                Pair("BRAND", "Xiaomi"),
+                Pair("MANUFACTURER", "Xiaomi"),
+                Pair("DEVICE", "degas"),
+                Pair("MODEL", "2406APNFAG"),
+                Pair("PRODUCT", "degas_global"),
+                Pair("FINGERPRINT", "Xiaomi/degas_global/degas:14/UP1A.231005.007/OS2.0.2.0.VNETWXM:user/release-keys"),
+                ),
+
+            "Pixel 2025",
+            getAndroidVersionFromLabel("U 14.0"),
+        ),
+
+        //失敗
+        DeviceEntries(
+            "Xiaomi 14T2-1", hashMapOf(
+                Pair("BRAND", "Xiaomi"),
+                Pair("MANUFACTURER", "Xiaomi"),
+                Pair("DEVICE", "degas"),
+                Pair("MODEL", "2406APNFAG"),
+                Pair("PRODUCT", "degas_global"),
+                Pair("FINGERPRINT", "Xiaomi/degas_global/degas:14/UP1A.231005.007/OS2.0.2.0.VNETWXM:user/release-keys"),
+                Pair("MARKETNAME", "Xiaomi 14T"),
+                //Pair("NAME", "degas_global"),
+                //Pair("CERT", "2406APNFAG"),
+                ),
+
+            "Pixel 2025",
+            getAndroidVersionFromLabel("U 14.0"),
+        ),
+
+        //失敗
+        DeviceEntries(
+            "Xiaomi 14T2-2", hashMapOf(
+                Pair("BRAND", "Xiaomi"),
+                Pair("MANUFACTURER", "Xiaomi"),
+                Pair("DEVICE", "degas"),
+                Pair("MODEL", "2406APNFAG"),
+                Pair("PRODUCT", "degas_global"),
+                Pair("FINGERPRINT", "Xiaomi/degas_global/degas:14/UP1A.231005.007/OS2.0.2.0.VNETWXM:user/release-keys"),
+                Pair("MARKETNAME", "Xiaomi 14T"),
+                Pair("NAME", "degas_global"),
+                //Pair("CERT", "2406APNFAG"),
+            ),
+
+            "Pixel 2025",
+            getAndroidVersionFromLabel("U 14.0"),
+        ),
+        // 半失敗
+        DeviceEntries(
+            "Xiaomi 14T3", hashMapOf(
+                Pair("BRAND", "Xiaomi"),
+                Pair("MANUFACTURER", "Xiaomi"),
+                Pair("DEVICE", "degas"),
+                Pair("MODEL", "2406APNFAG"),
+                Pair("PRODUCT", "degas_global"),
+                Pair("FINGERPRINT", "Xiaomi/degas_global/degas:14/UP1A.231005.007/OS2.0.2.0.VNETWXM:user/release-keys"),
+                Pair("NAME", "degas"),
+                Pair("INCREMENTAL", "OS2.0.2.0.VNETWXM"),
+                ),
+
+            "Pixel 2025",
+            getAndroidVersionFromLabel("U 14.0"),
         ),
     )
 
